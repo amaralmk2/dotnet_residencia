@@ -60,3 +60,16 @@ if(str1==str2){
 }
 
 #endregion
+
+#region 
+
+bool condicao1 = true;
+bool condicao2 = false;
+
+if(condicao1 == true && condicao2 == true){
+    Console.WriteLine("Ambas as condicoes são verdadeiras");
+}else{
+    Console.WriteLine("Ambas ou alguma das condições não são verdadeiras");
+}
+
+#endregion
