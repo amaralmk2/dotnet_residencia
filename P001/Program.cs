@@ -23,5 +23,14 @@ Console.WriteLine("A variavel ficou com o valor: "+ var);
 
 #region 
 
+int x=10, y=3;
+
+int result = x+y;
+
+Console.WriteLine(x + " + "+ y+ " = "+(x+y));
+Console.WriteLine(x+" - "+ y + " = "+(x-y));
+Console.WriteLine(x+" * "+ y + " = "+(x*y));
+Console.WriteLine(x+" / "+ y + " = "+(x/y));
+
 
 #endregion
