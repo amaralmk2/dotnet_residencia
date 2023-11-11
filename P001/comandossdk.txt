@@ -1,0 +1,5 @@
+Verifica a versão do SDK e atualiza.
+dotnet --version
+
+Remove uma versão espefica do SDK que esteja utilizando.
+dotnet --unistall-sdk <versão>
