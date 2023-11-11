@@ -46,3 +46,17 @@ if(a>b){
 }
 
 #endregion
+
+#region 
+
+string str1 = "Hello";
+string str2 = "World";
+
+
+if(str1==str2){
+    Console.WriteLine("as strings são iguais");
+}else{
+    Console.WriteLine("As strings não são iguais");
+}
+
+#endregion
