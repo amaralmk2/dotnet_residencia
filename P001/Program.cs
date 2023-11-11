@@ -73,3 +73,15 @@ if(condicao1 == true && condicao2 == true){
 }
 
 #endregion
+
+#region 
+
+int num1 = 7, num2 = 3, num3 = 10;
+
+if(num1 > num2){
+   Console.WriteLine(num1 + " > "+ num2);
+}if(num3 == (num1+num2)){
+   Console.WriteLine(num3 + " = " + "A soma de "+ num1 +" + "+num2);
+}
+
+#endregion
