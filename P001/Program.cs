@@ -1,10 +1,30 @@
 ﻿#region
 
-int anoCarro = 2012;
-long kmRodados = 10000000L;
-double litroGasolina = 20.5;
+    sbyte mySByte = -50;
 
-Console.WriteLine(" O carro tem " + kmRodados + "KM rodados" + "| tem " + litroGasolina + " L de combustivel " +"| O ano do carro é: "+ anoCarro);
+    byte myByte = 200;
+
+    short myShort = 1500;
+
+    ushort myUShort = 60000;
+
+    int myInt = -200000;
+
+    uint myUInt = 40000;
+
+    long myLong = -9000000;
+
+    ulong myULong = 180000;
+
+
+    Console.WriteLine($"sbyte: {mySByte}");
+    Console.WriteLine($"byte: {myByte}");
+    Console.WriteLine($"short: {myShort}");
+    Console.WriteLine($"ushort: {myUShort}");
+    Console.WriteLine($"int: {myInt}");
+    Console.WriteLine($"uint: {myUInt}");
+    Console.WriteLine($"long: {myLong}");
+    Console.WriteLine($"ulong: {myULong}");
 
 #endregion
 
