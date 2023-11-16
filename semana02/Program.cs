@@ -31,7 +31,12 @@ while( fib1 <= 100){
     fib1 = fib2;
     fib2 = fib3;
 }
+#endregion
 
+#region ReadLine Example
 
+Console.WriteLine("Informe uma string");
+string? str = Console.ReadLine();
+Console.WriteLine($"A string foi: {str}");
 
 #endregion
