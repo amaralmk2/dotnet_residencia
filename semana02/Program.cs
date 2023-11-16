@@ -20,3 +20,18 @@ for(int i = 0; i <= 30; i++ ){
 
 #endregion
 
+#region 
+
+int fib1 = 0, fib2 = 1, fib3;
+
+while( fib1 <= 100){
+
+    Console.WriteLine(fib1);
+    fib3 = fib1 + fib2;
+    fib1 = fib2;
+    fib2 = fib3;
+}
+
+
+
+#endregion
