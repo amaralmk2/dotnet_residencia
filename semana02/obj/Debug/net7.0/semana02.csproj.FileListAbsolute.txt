@@ -1,0 +1,15 @@
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/bin/Debug/net7.0/semana02
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/bin/Debug/net7.0/semana02.deps.json
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/bin/Debug/net7.0/semana02.runtimeconfig.json
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/bin/Debug/net7.0/semana02.dll
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/bin/Debug/net7.0/semana02.pdb
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.csproj.AssemblyReference.cache
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.GeneratedMSBuildEditorConfig.editorconfig
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.AssemblyInfoInputs.cache
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.AssemblyInfo.cs
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.csproj.CoreCompileInputs.cache
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.dll
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/refint/semana02.dll
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.pdb
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.genruntimeconfig.cache
+/home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/ref/semana02.dll
