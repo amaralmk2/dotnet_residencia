@@ -40,3 +40,14 @@ string? str = Console.ReadLine();
 Console.WriteLine($"A string foi: {str}");
 
 #endregion
+
+#region 
+
+string data = "02/11/1993";
+
+
+string dataSeparada = data.Split('/');
+Console.WriteLine(dataSeparada);
+
+
+#endregion
