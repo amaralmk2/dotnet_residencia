@@ -9,14 +9,12 @@
     tipoLong = long.MaxValue; 
 
     tipoString = "100";
-
     tipoInteiro = int.Parse(tipoString);
 
     Console.WriteLine("O máximo inteiro é: " + tipoInteiro);
     Console.WriteLine("O máximo longo é: " + tipoLong);
 
 #endregion
-
 
 #region Operadores
     tipoDouble = tipoInteiro + tipoLong;
