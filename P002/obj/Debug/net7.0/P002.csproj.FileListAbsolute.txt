@@ -1,0 +1,14 @@
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.AssemblyInfoInputs.cache
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.AssemblyInfo.cs
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.csproj.CoreCompileInputs.cache
+C:\Users\alexa\projeto\dotnet_residencia\P002\bin\Debug\net7.0\P002.exe
+C:\Users\alexa\projeto\dotnet_residencia\P002\bin\Debug\net7.0\P002.deps.json
+C:\Users\alexa\projeto\dotnet_residencia\P002\bin\Debug\net7.0\P002.runtimeconfig.json
+C:\Users\alexa\projeto\dotnet_residencia\P002\bin\Debug\net7.0\P002.dll
+C:\Users\alexa\projeto\dotnet_residencia\P002\bin\Debug\net7.0\P002.pdb
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.dll
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\refint\P002.dll
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.pdb
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\P002.genruntimeconfig.cache
+C:\Users\alexa\projeto\dotnet_residencia\P002\obj\Debug\net7.0\ref\P002.dll
