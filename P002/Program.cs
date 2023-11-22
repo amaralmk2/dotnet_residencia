@@ -26,8 +26,21 @@ class GerenciaTarefa{
         Console.WriteLine("Tarefa adicionada com sucesso!");
     }
 
-
+    public void VisualizarTarefas()
+    {
+        Console.WriteLine("Lista de Tarefas:");
+        foreach (var tarefa in tarefas){   
+            Console.WriteLine($"<------------------->");
+            Console.WriteLine($"Tarefa: {tarefa.Nome}");
+            Console.WriteLine($"Data: {tarefa.Data}");
+            Console.WriteLine($"ID: {tarefa.Id}");
+            Console.WriteLine($"<------------------->\n");
+        }
+    }
 }
+
+
+
 class Program
 {
     static void Main()
@@ -57,6 +70,7 @@ class Program
                     break;
 
                 case "2":
+                    gerenciador.VisualizarTarefas();
                     break;
 
                 case "3":
