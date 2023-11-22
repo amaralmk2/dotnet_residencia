@@ -26,8 +26,8 @@ class GerenciaTarefa{
         Console.WriteLine("Tarefa adicionada com sucesso!");
     }
 
-    public void VisualizarTarefas()
-    {
+    public void VisualizarTarefas(){
+
         Console.WriteLine("Lista de Tarefas:");
         foreach (var tarefa in tarefas){   
             Console.WriteLine($"<------------------->");
@@ -35,6 +35,21 @@ class GerenciaTarefa{
             Console.WriteLine($"Data: {tarefa.Data}");
             Console.WriteLine($"ID: {tarefa.Id}");
             Console.WriteLine($"<------------------->\n");
+        }
+    }
+
+     public void ExcluirTarefa(int id)
+    {
+        Tarefa tarefaParaRemover = tarefas.Find(delegate (Tarefa t) { return t.Id == id; });
+
+        if (tarefaParaRemover != null)
+        {
+            tarefas.Remove(tarefaParaRemover);
+            Console.WriteLine($"Tarefa com ID {id} removida com sucesso!");
+        }
+        else
+        {
+            Console.WriteLine($"Nenhuma tarefa encontrada com o ID {id}.");
         }
     }
 }
@@ -74,6 +89,20 @@ class Program
                     break;
 
                 case "3":
+
+                Console.Write("Digite o ID da tarefa a ser removida: ");
+                if (int.TryParse(Console.ReadLine(), out int idTarefaParaExcluir))
+                 {
+                    gerenciador.ExcluirTarefa(idTarefaParaExcluir);
+                 }
+                 else
+                {
+                 Console.WriteLine("ID inválido. Tente novamente.");
+             }
+                 break;
+                case "4":
+
+      
                     break;
 
                 default:
