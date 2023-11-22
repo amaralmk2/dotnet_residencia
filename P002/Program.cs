@@ -13,7 +13,19 @@
 }
 
 class GerenciaTarefa{
-    //private List<Tarefa> tarefas;
+    private List<Tarefa> tarefas;
+    private static int AdcId = 1;
+
+     public GerenciaTarefa(){
+        tarefas = new List<Tarefa>();
+    }
+
+   public void AdicionarTarefa(string nome, DateTime data){
+        Tarefa novaTarefa = new Tarefa(nome, data, AdcId++);
+        tarefas.Add(novaTarefa);
+        Console.WriteLine("Tarefa adicionada com sucesso!");
+    }
+
 
 }
 class Program
@@ -35,6 +47,13 @@ class Program
             {
                 case "1":
                     
+                    Console.Write("Digite o nome da tarefa: ");
+                    string ?nomeTarefa = Console.ReadLine();
+
+                    Console.Write("Digite a data da tarefa (formato: dd/mm/yyyy): ");
+                    DateTime dataTarefa = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", null);
+
+                    gerenciador.AdicionarTarefa(nomeTarefa, dataTarefa);
                     break;
 
                 case "2":
