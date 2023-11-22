@@ -16,7 +16,6 @@
 
     ulong myULong = 180000;
 
-
     Console.WriteLine($"sbyte: {mySByte}");
     Console.WriteLine($"byte: {myByte}");
     Console.WriteLine($"short: {myShort}");
