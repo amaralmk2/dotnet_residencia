@@ -68,7 +68,37 @@ class GerenciaTarefa{
     return tarefasEncontradas;
     }
 
+    public void ExibirEstatisticas()
+    {
+        int totalTarefas = tarefas.Count;
+        int tarefasConcluidas = tarefas.Count(t => t.TarefaRealizada);
+        int tarefasPendentes = totalTarefas - tarefasConcluidas;
+
+        Console.WriteLine($"Total de Tarefas: {totalTarefas}");
+        Console.WriteLine($"Tarefas Concluídas: {tarefasConcluidas}");
+        Console.WriteLine($"Tarefas Pendentes: {tarefasPendentes}");
+
+        if (tarefas.Any())
+        {
+            var tarefaMaisAntiga = tarefas.OrderBy(t => t.Data).First();
+            var tarefaMaisRecente = tarefas.OrderByDescending(t => t.Data).First();
+
+            Console.WriteLine($"Tarefa Mais Antiga:");
+            Console.WriteLine($"  Nome: {tarefaMaisAntiga.Nome}");
+            Console.WriteLine($"  Data: {tarefaMaisAntiga.Data}");
+
+            Console.WriteLine($"Tarefa Mais Recente:");
+            Console.WriteLine($"  Nome: {tarefaMaisRecente.Nome}");
+            Console.WriteLine($"  Data: {tarefaMaisRecente.Data}");
+        }
+        else
+        {
+            Console.WriteLine("Nenhuma tarefa cadastrada.");
+        }
+    }
 }
+
+
 
 class Program
 {
@@ -82,7 +112,10 @@ class Program
             Console.WriteLine("1. Adicionar Tarefa");
             Console.WriteLine("2. Visualizar Tarefas");
             Console.WriteLine("3. Excluir tarefa");
-            Console.WriteLine("4. Sair do programa");
+            Console.WriteLine("4. Buscar tarefa por palavra chave");
+            Console.WriteLine("5. Estatistica das tarefas");
+            Console.WriteLine("6. Sair do programa");
+
 
             string ?escolha = Console.ReadLine();
 
@@ -143,6 +176,10 @@ class Program
                 {
                     Console.WriteLine("Nenhuma tarefa encontrada com a palavra-chave fornecida.");
                 }
+                break;
+
+                case "6":
+                gerenciador.ExibirEstatisticas();
                 break;
                 
                 default:
