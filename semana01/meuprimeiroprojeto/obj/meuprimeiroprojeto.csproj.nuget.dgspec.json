@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj": {}
+    "C:\\Users\\alexa\\projeto\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj": {
+    "C:\\Users\\alexa\\projeto\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
         "projectName": "meuprimeiroprojeto",
-        "projectPath": "C:\\Users\\alexa\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
+        "projectPath": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
