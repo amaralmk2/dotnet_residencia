@@ -4,11 +4,11 @@
     public int Id {get; set; }
     public bool TarefaRealizada { get; set; } 
 
-    public Tarefa(string nome, DateTime data, int id){
+    public Tarefa(string nome, DateTime data, int id, bool tarefaRealizada = false){
         Nome = nome;
         Data = data;
         Id = id;
-        TarefaRealizada = false;
+        TarefaRealizada = tarefaRealizada;
     }
 
     public bool ContemPalavraChave(string palavraChave){
@@ -26,7 +26,11 @@ class GerenciaTarefa{
     }
 
    public void AdicionarTarefa(string nome, DateTime data){
-        Tarefa novaTarefa = new Tarefa(nome, data, AdcId++);
+
+        Console.Write("A tarefa está concluída? (S para Sim, N para Não): ");
+        bool tarefaConcluida = Console.ReadLine().Trim().ToUpper() == "S";
+
+        Tarefa novaTarefa = new Tarefa(nome, data, AdcId++, tarefaConcluida);
         tarefas.Add(novaTarefa);
         Console.WriteLine("Tarefa adicionada com sucesso!");
     }
@@ -130,7 +134,7 @@ class Program
                         Console.WriteLine($"<------------------->");
                         Console.WriteLine($"Tarefa: {tarefaEncontrada.Nome}");
                         Console.WriteLine($"Data: {tarefaEncontrada.Data}");
-                        Console.WriteLine($"ID: {tarefaEncontrada.Id}");
+                        Console.WriteLine($"ID: {tarefaEncontrada.Id}");    
                         Console.WriteLine($"Realizada: {tarefaEncontrada.TarefaRealizada}");
                         Console.WriteLine($"<------------------->\n");
                     }
