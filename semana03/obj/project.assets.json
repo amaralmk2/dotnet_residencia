@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj",
-      "projectName": "meuprimeiroprojeto",
-      "projectPath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj",
+      "projectUniqueName": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/semana03.csproj",
+      "projectName": "semana03",
+      "projectPath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/semana03.csproj",
       "packagesPath": "/home/alexandre-souza-amaral/.nuget/packages/",
-      "outputPath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/obj/",
+      "outputPath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/alexandre-souza-amaral/.nuget/NuGet/NuGet.Config"

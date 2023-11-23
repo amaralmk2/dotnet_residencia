@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ScndFLLAtr/7jUfxKHAC7BRkS/ETuctw1qUy1syOziYClHCD6mhv/a3KiH8grnA4+r2iISqx79n3l4Xo5FPfsg==",
+  "dgSpecHash": "W5wiwONG0NmbcyJgFqlQkiD0ZbrLR4eH3LASc0Mpm8e7qYqZASOI7crVB3SvN/NSNuJq/l06tqQ6EjyQ5vngMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
+  "projectFilePath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
