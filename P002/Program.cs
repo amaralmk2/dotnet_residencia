@@ -139,7 +139,8 @@ class Program
             Console.WriteLine("3. Excluir tarefa");
             Console.WriteLine("4. Buscar tarefa por palavra chave");
             Console.WriteLine("5. Estatistica das tarefas");
-            Console.WriteLine("6. Sair do programa");
+            Console.WriteLine("6. Buscar por tarefa Feitas ou ainda não feitas");
+            Console.WriteLine("7. Sair do programa");
 
 
             string ?escolha = Console.ReadLine();
@@ -175,11 +176,6 @@ class Program
                  break;
 
                 case "4":
-                Console.WriteLine("Saindo do programa. Até logo!");
-                Environment.Exit(0);
-                break;
-
-                case "5":
                 Console.Write("Digite a palavra-chave para pesquisa: ");
                 string palavraChave = Console.ReadLine();
                 List<Tarefa> tarefasEncontradas = gerenciador.PesquisarPorPalavraChave(palavraChave);
@@ -203,11 +199,11 @@ class Program
                 }
                 break;
 
-                case "6":
+                case "5":
                 gerenciador.ExibirEstatisticas();
                 break;
 
-                case "7":
+                case "6":
                 Console.WriteLine("Escolha o que deseja visualizar:");
                 Console.WriteLine("1. Tarefas Realizadas");
                 Console.WriteLine("2. Tarefas Pendentes");
@@ -229,6 +225,12 @@ class Program
                         break;
                 }
                 break;
+
+                case "7":
+                Console.WriteLine("Saindo do programa. Até logo!");
+                Environment.Exit(0);
+                break;
+
                 
                 default:
                 Console.WriteLine("Opção inválida. Tente novamente.");
