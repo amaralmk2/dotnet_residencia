@@ -1,15 +1,20 @@
-﻿class Tarefa
-{
+﻿class Tarefa{
     public string Nome { get; set; }
     public DateTime Data { get; set; }
     public int Id {get; set; }
+    public bool TarefaRealizada { get; set; } 
 
-    public Tarefa(string nome, DateTime data, int id)
-    {
+    public Tarefa(string nome, DateTime data, int id){
         Nome = nome;
         Data = data;
         Id = id;
+        TarefaRealizada = false;
     }
+
+    public bool ContemPalavraChave(string palavraChave){
+    return Nome.Contains(palavraChave, StringComparison.OrdinalIgnoreCase);
+    }
+
 }
 
 class GerenciaTarefa{
@@ -34,12 +39,12 @@ class GerenciaTarefa{
             Console.WriteLine($"Tarefa: {tarefa.Nome}");
             Console.WriteLine($"Data: {tarefa.Data}");
             Console.WriteLine($"ID: {tarefa.Id}");
+            Console.WriteLine($"Realizada: {tarefa.TarefaRealizada}");
             Console.WriteLine($"<------------------->\n");
         }
     }
 
-     public void ExcluirTarefa(int id)
-    {
+     public void ExcluirTarefa(int id){
         Tarefa tarefaParaRemover = tarefas.Find(delegate (Tarefa t) { return t.Id == id; });
 
         if (tarefaParaRemover != null)
@@ -51,10 +56,15 @@ class GerenciaTarefa{
         {
             Console.WriteLine($"Nenhuma tarefa encontrada com o ID {id}.");
         }
+    
+     }
+
+     public List<Tarefa> PesquisarPorPalavraChave(string palavraChave){
+    List<Tarefa> tarefasEncontradas = tarefas.FindAll(tarefa => tarefa.ContemPalavraChave(palavraChave));
+    return tarefasEncontradas;
     }
+
 }
-
-
 
 class Program
 {
@@ -67,7 +77,8 @@ class Program
             Console.WriteLine("\nEscolha uma opção:");
             Console.WriteLine("1. Adicionar Tarefa");
             Console.WriteLine("2. Visualizar Tarefas");
-            Console.WriteLine("3. Sair");
+            Console.WriteLine("3. Excluir tarefa");
+            Console.WriteLine("4. Sair do programa");
 
             string ?escolha = Console.ReadLine();
 
@@ -100,14 +111,39 @@ class Program
                  Console.WriteLine("ID inválido. Tente novamente.");
              }
                  break;
+
                 case "4":
+                Console.WriteLine("Saindo do programa. Até logo!");
+                Environment.Exit(0);
+                break;
 
-      
-                    break;
-
+                case "5":
+                Console.Write("Digite a palavra-chave para pesquisa: ");
+                string palavraChave = Console.ReadLine();
+                List<Tarefa> tarefasEncontradas = gerenciador.PesquisarPorPalavraChave(palavraChave);
+                
+                if (tarefasEncontradas.Count > 0)
+                {
+                    Console.WriteLine("Tarefas encontradas:");
+                    foreach (var tarefaEncontrada in tarefasEncontradas)
+                    {
+                        Console.WriteLine($"<------------------->");
+                        Console.WriteLine($"Tarefa: {tarefaEncontrada.Nome}");
+                        Console.WriteLine($"Data: {tarefaEncontrada.Data}");
+                        Console.WriteLine($"ID: {tarefaEncontrada.Id}");
+                        Console.WriteLine($"Realizada: {tarefaEncontrada.TarefaRealizada}");
+                        Console.WriteLine($"<------------------->\n");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Nenhuma tarefa encontrada com a palavra-chave fornecida.");
+                }
+                break;
+                
                 default:
-                    Console.WriteLine("Opção inválida. Tente novamente.");
-                    break;
+                Console.WriteLine("Opção inválida. Tente novamente.");
+                break;
             }
         }
     }
