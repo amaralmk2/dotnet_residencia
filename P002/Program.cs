@@ -68,8 +68,8 @@ class GerenciaTarefa{
     return tarefasEncontradas;
     }
 
-    public void ExibirEstatisticas()
-    {
+    public void ExibirEstatisticas(){
+
         int totalTarefas = tarefas.Count;
         int tarefasConcluidas = tarefas.Count(t => t.TarefaRealizada);
         int tarefasPendentes = totalTarefas - tarefasConcluidas;
@@ -96,8 +96,33 @@ class GerenciaTarefa{
             Console.WriteLine("Nenhuma tarefa cadastrada.");
         }
     }
-}
 
+    public void ListarTarefasPorStatus(bool exibirRealizadas){
+        var tarefasFiltradas = exibirRealizadas
+            ? tarefas.Where(t => t.TarefaRealizada).ToList()
+            : tarefas.Where(t => !t.TarefaRealizada).ToList();
+
+        if (tarefasFiltradas.Any())
+        {
+            string status = exibirRealizadas ? "Realizadas" : "Pendentes";
+
+            Console.WriteLine($"Tarefas {status}:");
+            foreach (var tarefa in tarefasFiltradas)
+            {
+                Console.WriteLine($"<------------------->");
+                Console.WriteLine($"Tarefa: {tarefa.Nome}");
+                Console.WriteLine($"Data: {tarefa.Data}");
+                Console.WriteLine($"ID: {tarefa.Id}");
+                Console.WriteLine($"<------------------->\n");
+            }
+        }
+        else
+        {
+            string status = exibirRealizadas ? "realizadas" : "pendentes";
+            Console.WriteLine($"Nenhuma tarefa {status} encontrada.");
+        }
+    }
+}
 
 
 class Program
@@ -180,6 +205,29 @@ class Program
 
                 case "6":
                 gerenciador.ExibirEstatisticas();
+                break;
+
+                case "7":
+                Console.WriteLine("Escolha o que deseja visualizar:");
+                Console.WriteLine("1. Tarefas Realizadas");
+                Console.WriteLine("2. Tarefas Pendentes");
+
+                string escolhaVisualizacao = Console.ReadLine();
+
+                switch (escolhaVisualizacao)
+                {
+                    case "1":
+                        gerenciador.ListarTarefasPorStatus(true); 
+                        break;
+
+                    case "2":
+                        gerenciador.ListarTarefasPorStatus(false); 
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida. Tente novamente.");
+                        break;
+                }
                 break;
                 
                 default:
