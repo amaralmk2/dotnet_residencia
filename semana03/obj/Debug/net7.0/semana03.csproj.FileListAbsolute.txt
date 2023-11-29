@@ -13,3 +13,17 @@
 /home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/obj/Debug/net7.0/semana03.pdb
 /home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/obj/Debug/net7.0/semana03.genruntimeconfig.cache
 /home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/obj/Debug/net7.0/ref/semana03.dll
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\bin\Debug\net7.0\semana03.exe
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\bin\Debug\net7.0\semana03.deps.json
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\bin\Debug\net7.0\semana03.runtimeconfig.json
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\bin\Debug\net7.0\semana03.dll
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\bin\Debug\net7.0\semana03.pdb
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.AssemblyInfoInputs.cache
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.AssemblyInfo.cs
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.csproj.CoreCompileInputs.cache
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.dll
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\refint\semana03.dll
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.pdb
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\semana03.genruntimeconfig.cache
+C:\Users\alexa\dotnet_definitivo\dotnet_residencia\semana03\obj\Debug\net7.0\ref\semana03.dll

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj": {}
+    "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj": {}
   },
   "projects": {
-    "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj": {
+    "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
         "projectName": "meuprimeiroprojeto",
-        "projectPath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/meuprimeiroprojeto.csproj",
-        "packagesPath": "/home/alexandre-souza-amaral/.nuget/packages/",
-        "outputPath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana01/meuprimeiroprojeto/obj/",
+        "projectPath": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\meuprimeiroprojeto.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana01\\meuprimeiroprojeto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/alexandre-souza-amaral/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
