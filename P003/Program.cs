@@ -136,8 +136,26 @@ class Program{
                 switch (selecionar)
             {
                 case '1':
-                    
-                    break;
+                    int prod_qtdd;
+
+                    Console.WriteLine("Defina um limite para o estoque dos produtos.");
+                    prod_qtdd = int.Parse(Console.ReadLine());
+
+                    List<Estoque> estoque_abaixo = lista
+                    .Where(x => x.Qtd_prod <= prod_qtdd)
+                    .Select(x => new Estoque(x.Cod_prod, x.Qtd_prod, x.Nome_prod, x.Preco_prod))
+                    .ToList();
+
+                    if(estoque_abaixo.Count >= 1){
+                        Console.WriteLine("Os produtos com baixo estoque: ");
+                    }
+
+                    foreach(Estoque key in estoque_abaixo){
+                        Console.WriteLine($"Produto: {key.Nome_prod} - ID: {key.Cod_prod} - Quantidade: {key.Qtd_prod}");
+                    }
+
+
+                    continue;
 
                 case '2':
                     
