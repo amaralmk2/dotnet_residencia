@@ -16,9 +16,7 @@ class Estoque{
 
     }
 
-    public void IncrementaCod(){
-        Cod_prod++;
-    }
+
 }
 
 
@@ -37,7 +35,10 @@ class Program{
             Console.WriteLine("<------------------>");
             Console.WriteLine("1 - Cadastrat Produto");
             Console.WriteLine("2 - Consultar produto por Cod.");
-            Console.WriteLine("3 - Atualizar estoque de Prod");
+            Console.WriteLine("3 - Atualizar estoque de Prod.");
+            Console.WriteLine("4 - Modulo de relatio.");
+            Console.WriteLine("5 - Sair do programa.");
+            
             op = int.Parse(Console.ReadLine());
 
             if(op == 1){
@@ -110,24 +111,51 @@ class Program{
                 
                 Console.WriteLine("Insira agora o novo estoque desse produto: ");
                 Qtd_atualizada = int.Parse(Console.ReadLine());
+                
+                List<Estoque> novo_estoque = 
+                lista.Select(x => x.Cod_prod == id ?
+                new Estoque(x.Cod_prod, Qtd_atualizada, x.Nome_prod, x.Preco_prod) : x)
+                .ToList();
 
-                List<Estoque> novo_estoque = lista.Select(x => x.Cod_prod == id ? new Estoque(x.Cod_prod, Qtd_atualizada, x.Nome_prod, x.Preco_prod) : x).ToList();
-
-                for(int i=0; i < 2; i++){
+                for(int i=0; i < lista.Count; i++){
                     lista[i] = novo_estoque[i];
-                }
-
-                foreach(Estoque key in novo_estoque){
-                    Console.WriteLine($"Produto Selecionado: {key.Nome_prod} - Estoque Atual: {key.Qtd_prod}");
-                }
-                Console.WriteLine();
-                foreach(Estoque key in lista){
-                    Console.WriteLine($"Produto Selecionado: {key.Nome_prod} - Estoque Atual: {key.Qtd_prod}");
                 }
 
             }
 
+            if(op == 4){
+                char selecionar = Console.ReadKey().KeyChar;
 
+                Console.WriteLine("Bem vindo ao modulo de Relatorio.");
+                Console.WriteLine("1 - Produtos com baixo estoque");
+                Console.WriteLine("2 - Listar produtos entre valor Min e Max.");
+                Console.WriteLine("3 - Estoque Total e Valor Total de cada produto por estoque.");
+                Console.WriteLine("4 - voltar ao menu anterior.");
+
+
+                switch (selecionar)
+            {
+                case '1':
+                    
+                    break;
+
+                case '2':
+                    
+                    break;
+
+                case '3':
+                    
+                    return;
+
+                case '4':
+                    
+                    return;
+
+                default:
+                    Console.WriteLine("Opção inválida. Tente novamente.");
+                    break;
+            }
+            }
 
             if(op == 4){
             flag = true;
