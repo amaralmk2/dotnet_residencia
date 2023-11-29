@@ -36,7 +36,8 @@ class Program{
         do{
             Console.WriteLine("<------------------>");
             Console.WriteLine("1 - Cadastrat Produto");
-            Console.WriteLine("Teste listar produto.");
+            Console.WriteLine("2 - Consultar produto por Cod.");
+            Console.WriteLine("3 - Atualizar estoque de Prod");
             op = int.Parse(Console.ReadLine());
 
             if(op == 1){
@@ -92,8 +93,43 @@ class Program{
             }
 
             
-
             if(op == 3){
+                
+                int id, Qtd_atualizada;
+
+                foreach(Estoque key in lista){
+                    Console.WriteLine($"Cod.Produto: {key.Cod_prod} - Produto: {key.Nome_prod} - Estoque atual: {key.Qtd_prod}");
+                }
+
+                Console.WriteLine("Insira o ID do produto que deseja atualizar o estoque.");
+                id = int.Parse(Console.ReadLine());
+
+                foreach(Estoque key in lista){
+                    Console.WriteLine($"Produto Selecionado: {key.Nome_prod} - Estoque Atual: {key.Qtd_prod}");
+                }
+                
+                Console.WriteLine("Insira agora o novo estoque desse produto: ");
+                Qtd_atualizada = int.Parse(Console.ReadLine());
+
+                List<Estoque> novo_estoque = lista.Select(x => x.Cod_prod == id ? new Estoque(x.Cod_prod, Qtd_atualizada, x.Nome_prod, x.Preco_prod) : x).ToList();
+
+                for(int i=0; i < 2; i++){
+                    lista[i] = novo_estoque[i];
+                }
+
+                foreach(Estoque key in novo_estoque){
+                    Console.WriteLine($"Produto Selecionado: {key.Nome_prod} - Estoque Atual: {key.Qtd_prod}");
+                }
+                Console.WriteLine();
+                foreach(Estoque key in lista){
+                    Console.WriteLine($"Produto Selecionado: {key.Nome_prod} - Estoque Atual: {key.Qtd_prod}");
+                }
+
+            }
+
+
+
+            if(op == 4){
             flag = true;
             }
             
