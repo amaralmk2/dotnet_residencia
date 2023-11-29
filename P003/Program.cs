@@ -68,8 +68,16 @@ class Program{
 
                 }while(flag_temp == true);
 
+            }
+
+            if(op == 2){
+
+                foreach(Estoque key in lista){
+                    Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
+                }
 
             }
+
             if(op == 3){
             flag = true;
             }
