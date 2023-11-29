@@ -71,12 +71,27 @@ class Program{
             }
 
             if(op == 2){
+                int cod_temporario;
+                Boolean flag_temp = false;
+
 
                 foreach(Estoque key in lista){
                     Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
                 }
+                
+                Console.WriteLine("Escreva o cod correspondente que deseja buscar do produto.");
+                cod_temporario = int.Parse(Console.ReadLine());
 
+                List<Estoque> prod_corresp = lista.Where(x => cod_temporario == x.Cod_prod)
+                .Select(x => new Estoque(x.Cod_prod,x.Qtd_prod,x.Nome_prod,x.Preco_prod))
+                .ToList();
+
+                foreach(Estoque key in prod_corresp){
+                    Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
+                }
             }
+
+            
 
             if(op == 3){
             flag = true;
