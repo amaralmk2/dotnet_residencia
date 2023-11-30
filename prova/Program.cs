@@ -1,23 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 class Advogado{
 
-    public string Nome {set ; get;}
-    public DateTime Dat_nascimento {set; get;}
+    private string cpf;
+    private string cna;
+
+    public string Nome { get; set; }
+    public DateTime Dat_nascimento { get; set; }
     
    public string Cpf
+{
+    get { return cpf; }
+    set
     {
-        get { return Cpf; }
-        set
+        if (!ValidarCpfUnico(value))
         {
-            if (!ValidarCpfUnico(value))
-            {
-                throw new InvalidOperationException($"Erro: CPF {value} já existe.");
-            }
-            Cpf = value;
+            throw new InvalidOperationException($"Erro: CPF {value} já existe.");
         }
+        cpf = value;
     }
+}
+     public string Cna
+{
+    get { return cna; }
+    set
+    {
+        if (!ValidarCnaUnico(value))
+        {
+            throw new InvalidOperationException($"Erro: CNA {value} já existe.");
+        }
+        cna = value;
+    }
+}
+    
    
       private bool ValidarCpfUnico(string novoCpf){
     
@@ -26,7 +43,26 @@ class Advogado{
         return !cpfsExistentes.Contains(novoCpf);
     }
 
+    private bool ValidarCnaUnico(string novoCna)
+    {
+        
+        List<string> cnasExistentes = new List<string> { "OAB123", "OAB456" };
+
+        return !cnasExistentes.Contains(novoCna);
+    }
+
+    public Advogado(string nome, DateTime dat_nascimento, string cpf, string cna){
+
+        Nome = nome;
+        Dat_nascimento = dat_nascimento;
+        Cpf = cpf;
+        Cna = cna;
+
+    }
+
 }
+
+
 
 class Cliente{
 
@@ -50,7 +86,24 @@ class Program{
         List<Advogado> advogados = new List<Advogado>();
         List<Cliente> cliente = new List<Cliente>();
 
-        advogados.Add(new Advogado("Pedro", DateTime.Now, "06518468548", "AE238V"));
+        advogados.Add(new Advogado("Pedro", DateTime.Now, "12345578901", "AE238V"));
+
+     try
+        {
+            Advogado advogado2 = new Advogado("Maria", DateTime.Now, "98765432101", "OAB456");
+            advogados.Add(advogado2);
+        }
+        catch (InvalidOperationException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        // Exemplo de impressão
+        foreach (Advogado advogado in advogados)
+        {
+            Console.WriteLine($"Advogado: {advogado.Nome}, CPF: {advogado.Cpf}, CNA: {advogado.Cna}");
+        }
+
 
     }
 }
