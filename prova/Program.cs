@@ -67,9 +67,31 @@ class Advogado{
 class Cliente{
 
      public string Nome {set ; get;}
-     public string Cpf {set; get;}
+     private string cpf;
      string EstadoCivil {set; get;}
      string Profissao {set; get;}
+
+      public string Cpf {
+    get { return cpf; }
+    set
+    {
+        if (!ValidarCpfUnico(value))
+        {
+            throw new InvalidOperationException($"Erro: CPF {value} já existe.");
+        }
+        cpf = value;
+    }
+}
+
+        private bool ValidarCpfUnico(string novoCpf){
+    
+        List<string> cpfsExistentes = new List<string> { "12345678901", "98765432101" };
+
+        return !cpfsExistentes.Contains(novoCpf);
+    }
+
+
+
      public Cliente(string nome, string cpf, string estadocivil, string profissao){
                 Nome = nome;
                 Cpf = cpf;
@@ -87,11 +109,27 @@ class Program{
         List<Cliente> cliente = new List<Cliente>();
 
         advogados.Add(new Advogado("Pedro", DateTime.Now, "12345578901", "AE238V"));
+        cliente.Add(new Cliente("João", "12345578991", "Solteiro", "Marceneiro"));
+
+        try
+        {   
+            cliente.Add(new Cliente("João", "12345578991", "Solteiro", "Marceneiro"));   
+        }
+        catch (InvalidOperationException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+
+        // Exemplo de impressão
+        foreach (Cliente client in cliente)
+        {
+            Console.WriteLine($"Nome: {client.Nome}, CPF: {client.Cpf},");
+        }
+
 
      try
-        {
-            Advogado advogado2 = new Advogado("Maria", DateTime.Now, "98765432101", "OAB456");
-            advogados.Add(advogado2);
+        {   
+            advogados.Add(new Advogado("Maria", DateTime.Now, "98765432101", "OAB456"));   
         }
         catch (InvalidOperationException e)
         {
