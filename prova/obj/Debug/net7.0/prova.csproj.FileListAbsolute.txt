@@ -1,0 +1,4 @@
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.AssemblyInfoInputs.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.AssemblyInfo.cs
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.csproj.CoreCompileInputs.cache
