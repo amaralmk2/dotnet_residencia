@@ -203,5 +203,11 @@ class Program
 
         Console.WriteLine("A lista dos clientes em ordem alfabetica: ");
 
+        List<Cliente> NovoCLiente = clientes.OrderBy(x=> x.Nome).ToList();
+
+        foreach(Cliente cliente in NovoCLiente){
+            Console.WriteLine($"Cliente: {cliente.Nome}, CPF: {cliente.Cpf}, Idade: {cliente.CalcularIdade()}, Nascimento: {cliente.Dat_nascimento.ToString("dd/MM/yyyy")}");
+        }
+
     }
         }
