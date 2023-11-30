@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana03\\semana03.csproj",
+      "projectUniqueName": "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\semana03\\semana03.csproj",
       "projectName": "semana03",
-      "projectPath": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana03\\semana03.csproj",
+      "projectPath": "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\semana03\\semana03.csproj",
       "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana03\\obj\\",
+      "outputPath": "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\semana03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"

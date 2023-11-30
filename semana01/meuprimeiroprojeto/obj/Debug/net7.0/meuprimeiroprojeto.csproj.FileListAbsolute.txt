@@ -12,3 +12,17 @@ C:\Users\alexa\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\re
 C:\Users\alexa\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.pdb
 C:\Users\alexa\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.genruntimeconfig.cache
 C:\Users\alexa\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\ref\meuprimeiroprojeto.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\bin\Debug\net7.0\meuprimeiroprojeto.exe
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\bin\Debug\net7.0\meuprimeiroprojeto.deps.json
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\bin\Debug\net7.0\meuprimeiroprojeto.runtimeconfig.json
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\bin\Debug\net7.0\meuprimeiroprojeto.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\bin\Debug\net7.0\meuprimeiroprojeto.pdb
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.AssemblyInfoInputs.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.AssemblyInfo.cs
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.csproj.CoreCompileInputs.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\refint\meuprimeiroprojeto.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.pdb
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\meuprimeiroprojeto.genruntimeconfig.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana01\meuprimeiroprojeto\obj\Debug\net7.0\ref\meuprimeiroprojeto.dll

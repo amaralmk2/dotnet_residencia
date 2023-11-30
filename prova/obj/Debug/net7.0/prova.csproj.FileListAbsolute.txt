@@ -2,3 +2,13 @@ C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.Gener
 C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.AssemblyInfoInputs.cache
 C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.AssemblyInfo.cs
 C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.csproj.CoreCompileInputs.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\bin\Debug\net7.0\prova.exe
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\bin\Debug\net7.0\prova.deps.json
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\bin\Debug\net7.0\prova.runtimeconfig.json
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\bin\Debug\net7.0\prova.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\bin\Debug\net7.0\prova.pdb
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\refint\prova.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.pdb
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\prova.genruntimeconfig.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\prova\obj\Debug\net7.0\ref\prova.dll

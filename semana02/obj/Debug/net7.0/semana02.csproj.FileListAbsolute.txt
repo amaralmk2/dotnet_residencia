@@ -13,3 +13,10 @@
 /home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.pdb
 /home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/semana02.genruntimeconfig.cache
 /home/alexandre-souza-amaral/dotnet/dotnet_residencia/semana02/obj/Debug/net7.0/ref/semana02.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\semana02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\semana02.AssemblyInfoInputs.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\semana02.AssemblyInfo.cs
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\semana02.csproj.CoreCompileInputs.cache
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\semana02.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\refint\semana02.dll
+C:\Users\alexa\dotnet_prova\dotnet_residencia\semana02\obj\Debug\net7.0\semana02.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexa\\projeto\\dotnet_residencia\\P002\\P002.csproj": {}
+    "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\P002\\P002.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexa\\projeto\\dotnet_residencia\\P002\\P002.csproj": {
+    "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\P002\\P002.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\P002\\P002.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\P002\\P002.csproj",
         "projectName": "P002",
-        "projectPath": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\P002\\P002.csproj",
+        "projectPath": "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\P002\\P002.csproj",
         "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexa\\projeto\\dotnet_residencia\\P002\\obj\\",
+        "outputPath": "C:\\Users\\alexa\\dotnet_prova\\dotnet_residencia\\P002\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config"
