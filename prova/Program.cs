@@ -57,8 +57,7 @@ class Advogado
         cpfsExistentes.Add(cpf);
     }
 
-    public int CalcularIdade()
-    {
+    public int CalcularIdade() {
         DateTime hoje = DateTime.Now;
         int idade = hoje.Year - Dat_nascimento.Year;
 
@@ -76,6 +75,9 @@ class Cliente
     private string cpf;
 
     public string Nome { get; set; }
+
+    public DateTime Dat_nascimento { get; set; }
+
     string EstadoCivil { get; set; }
     string Profissao { get; set; }
 
@@ -99,13 +101,26 @@ class Cliente
         return !cpfsExistentes.Contains(novoCpf);
     }
 
-    public Cliente(string nome, string cpf, string estadocivil, string profissao)
+    public Cliente(string nome, string cpf,DateTime dat_nascimento, string estadocivil, string profissao)
     {
         Nome = nome;
         Cpf = cpf;
+        Dat_nascimento = dat_nascimento;
         EstadoCivil = estadocivil;
         Profissao = profissao;
         cpfsExistentes.Add(cpf);
+    }
+
+    public int CalcularIdade() {
+        DateTime hoje = DateTime.Now;
+        int idade = hoje.Year - Dat_nascimento.Year;
+
+        if (hoje.Month < Dat_nascimento.Month || (hoje.Month == Dat_nascimento.Month && hoje.Day < Dat_nascimento.Day))
+        {
+            idade--;
+        }
+
+        return idade;
     }
 }
 
@@ -117,11 +132,11 @@ class Program
         List<Cliente> clientes = new List<Cliente>();
 
         advogados.Add(new Advogado("Pedro", new DateTime(1990, 1, 1), "12345578901", "AE238V"));
-        clientes.Add(new Cliente("João", "12345578901", "Solteiro", "Marceneiro"));
+        clientes.Add(new Cliente("João", "12345578901",new DateTime(1990, 1, 1) , "Solteiro", "Marceneiro"));
 
         try
         {
-            clientes.Add(new Cliente("João", "12345578901", "Solteiro", "Marceneiro"));
+            clientes.Add(new Cliente("João", "12345578901", new DateTime(1990, 1, 1), "Solteiro", "Marceneiro"));
         }
         catch (InvalidOperationException e)
         {
