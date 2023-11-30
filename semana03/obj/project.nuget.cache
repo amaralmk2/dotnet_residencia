@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9yJxkgVGBugZQBmpPkYY7togvnDI+jZjPEbYzFykiAmJ/qekBxVw/EZ9c1qfsUVzwPuyhc363XcEHDiam4rTmA==",
+  "dgSpecHash": "RPisX97Naxg/2cSsheUoRPKi69hARPnU7lzVwj5kknFI1bIVIxFezIfeF6jLB7E9QoNzseEbsJSsT+w9XYewZw==",
   "success": true,
-  "projectFilePath": "/home/alexandre-souza-amaral/dotnet-correto/dotnet_residencia/semana03/semana03.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\dotnet_definitivo\\dotnet_residencia\\semana03\\semana03.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
