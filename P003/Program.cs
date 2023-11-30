@@ -8,13 +8,62 @@ class Estoque{
     public double Preco_prod {set; get;}
 
     public Estoque(int cod_prod, int qtd_prod, string nome_prod, double preco_prod){
-        
         Cod_prod = cod_prod;
         Qtd_prod = qtd_prod;
         Nome_prod = nome_prod;
         Preco_prod = preco_prod;
 
     }
+
+    public Estoque()
+    {
+       
+    }
+
+    public static void MenorValor(List<(int cod_prod, int qtd_prod, String nome_prod, double preco_prod)> lista){
+
+                     int prod_qtdd;
+
+                    Console.WriteLine("Defina um limite para o estoque dos produtos.");
+                    prod_qtdd = int.Parse(Console.ReadLine());
+
+                    List<Estoque> estoque_abaixo = lista
+                    .Where(x => x.qtd_prod <= prod_qtdd)
+                    .Select(x => new Estoque(x.cod_prod, x.qtd_prod, x.nome_prod, x.preco_prod))
+                    .ToList();
+
+                    if(estoque_abaixo.Count >= 1){
+                        Console.WriteLine("Os produtos com baixo estoque: ");
+                    }
+
+                    foreach(Estoque key in estoque_abaixo){
+                        Console.WriteLine($"Produto: {key.Nome_prod} - ID: {key.Cod_prod} - Quantidade: {key.Qtd_prod}");
+                    }
+    }
+
+
+    public static void ConsultarProduto(List<(int cod_prod, int qtd_prod, String nome_prod, double preco_prod)> lista){
+        int cod_temporario;
+                
+                Boolean flag_temp = false;
+                List<Estoque> lista2 = new List<Estoque>();
+
+                foreach((int Cod_prod, int Qtd_prod, String Nome_prod, double Preco_prod) key in lista){
+                    Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
+                }
+                
+                Console.WriteLine("Escreva o cod correspondente que deseja buscar do produto.");
+                cod_temporario = int.Parse(Console.ReadLine());
+
+                var prod_corresp = lista.Where(x => cod_temporario == x.cod_prod)
+                .Select(x => new Estoque(x.cod_prod,x.qtd_prod,x.nome_prod,x.preco_prod))
+                .ToList();
+
+                foreach(Estoque key in prod_corresp){
+                    Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
+                }
+    }
+    
 
 
 }
@@ -27,13 +76,13 @@ class Program{
         int op,op2, qtd_prod, cod_prod;
         double preco_prod;
         String nome_prod, ch;
-
-        List<Estoque> lista = 
-        new List<Estoque>();
+        
+        Estoque estoque = new Estoque();
+        List<Estoque> lista = new List<Estoque>();
 
         do{
             Console.WriteLine("<------------------>");
-            Console.WriteLine("1 - Cadastrat Produto");
+            Console.WriteLine("1 - Cadastrar Produto");
             Console.WriteLine("2 - Consultar produto por Cod.");
             Console.WriteLine("3 - Atualizar estoque de Prod.");
             Console.WriteLine("4 - Modulo de relatio.");
@@ -73,24 +122,7 @@ class Program{
             }
 
             if(op == 2){
-                int cod_temporario;
-                Boolean flag_temp = false;
-
-
-                foreach(Estoque key in lista){
-                    Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
-                }
-                
-                Console.WriteLine("Escreva o cod correspondente que deseja buscar do produto.");
-                cod_temporario = int.Parse(Console.ReadLine());
-
-                List<Estoque> prod_corresp = lista.Where(x => cod_temporario == x.Cod_prod)
-                .Select(x => new Estoque(x.Cod_prod,x.Qtd_prod,x.Nome_prod,x.Preco_prod))
-                .ToList();
-
-                foreach(Estoque key in prod_corresp){
-                    Console.WriteLine($"Produto: {key.Nome_prod}, Codigo do produto: {key.Cod_prod}, Quantidade: {key.Qtd_prod}, Preço: {key.Preco_prod}");
-                }
+                Estoque.ConsultarProduto(lista.Select(x => (x.Cod_prod, x.Qtd_prod, x.Nome_prod, x.Preco_prod)).ToList());
             }
 
             
@@ -129,30 +161,16 @@ class Program{
                 Console.WriteLine("Bem vindo ao modulo de Relatorio.");
                 Console.WriteLine("1 - Produtos com baixo estoque");
                 Console.WriteLine("2 - Listar produtos entre valor Min e Max.");
-                Console.WriteLine("3 - Estoque Total e Valor Total de cada produto por estoque.");
-                Console.WriteLine("4 - voltar ao menu anterior.");
+                Console.WriteLine("3 - valor total em estoque.");
+                Console.WriteLine("4 - valor total em estoque por produto.");
+                Console.WriteLine("5 - voltar ao menu anterior.");
 
                 op2 = int.Parse(Console.ReadLine());
 
                 if(op2 == 1){
-
-                    int prod_qtdd;
-
-                    Console.WriteLine("Defina um limite para o estoque dos produtos.");
-                    prod_qtdd = int.Parse(Console.ReadLine());
-
-                    List<Estoque> estoque_abaixo = lista
-                    .Where(x => x.Qtd_prod <= prod_qtdd)
-                    .Select(x => new Estoque(x.Cod_prod, x.Qtd_prod, x.Nome_prod, x.Preco_prod))
-                    .ToList();
-
-                    if(estoque_abaixo.Count >= 1){
-                        Console.WriteLine("Os produtos com baixo estoque: ");
-                    }
-
-                    foreach(Estoque key in estoque_abaixo){
-                        Console.WriteLine($"Produto: {key.Nome_prod} - ID: {key.Cod_prod} - Quantidade: {key.Qtd_prod}");
-                    }
+                    
+                    
+                     Estoque.MenorValor(lista.Select(x => (x.Cod_prod, x.Qtd_prod, x.Nome_prod, x.Preco_prod)).ToList());
 
                 }
                 
@@ -165,7 +183,7 @@ class Program{
                     valor_min = double.Parse(Console.ReadLine());
                     valor_max = double.Parse(Console.ReadLine());
 
-                    List<Estoque> MediaValor = lista.Where(x => x.Preco_prod <= valor_min && x.Preco_prod >= valor_max)
+                    List<Estoque> MediaValor = lista.Where(x => x.Preco_prod >= valor_min && x.Preco_prod <= valor_max)
                     .Select(x => new Estoque(x.Cod_prod,x.Qtd_prod,x.Nome_prod,x.Preco_prod)).ToList();
 
                     if(MediaValor.Count >= 1){
@@ -176,22 +194,25 @@ class Program{
                         Console.WriteLine($"Produto: {key.Nome_prod} - Valor: {key.Preco_prod} - Código: {key.Cod_prod}");
                     }
 
-
                 }
 
                 if(op2 == 3){
-
+                    Console.WriteLine($"O total do inventario: {lista.Sum(x => x.Qtd_prod * x.Preco_prod)}");
                 }
 
                 if(op2 == 4){
+                    lista.ForEach(x => Console.WriteLine($"{x.Nome_prod} - {x.Qtd_prod*x.Preco_prod}"));
+                }
+
+                if(op2 == 5){
                     flag2 = true;
                 }
 
-                }while(!flag2);
+                 }while(!flag2);
 
             }
 
-            if(op == 4){
+            if(op == 5){
             flag = true;
             }
             
