@@ -23,8 +23,8 @@ class Estoque{
 class Program{
 
     static void Main(String[] args){
-        Boolean flag = false;
-        int op, qtd_prod, cod_prod;
+        Boolean flag = false, flag2 = false;
+        int op,op2, qtd_prod, cod_prod;
         double preco_prod;
         String nome_prod, ch;
 
@@ -124,7 +124,7 @@ class Program{
             }
 
             if(op == 4){
-                char selecionar = Console.ReadKey().KeyChar;
+                do{
 
                 Console.WriteLine("Bem vindo ao modulo de Relatorio.");
                 Console.WriteLine("1 - Produtos com baixo estoque");
@@ -132,10 +132,10 @@ class Program{
                 Console.WriteLine("3 - Estoque Total e Valor Total de cada produto por estoque.");
                 Console.WriteLine("4 - voltar ao menu anterior.");
 
+                op2 = int.Parse(Console.ReadLine());
 
-                switch (selecionar)
-            {
-                case '1':
+                if(op2 == 1){
+
                     int prod_qtdd;
 
                     Console.WriteLine("Defina um limite para o estoque dos produtos.");
@@ -154,25 +154,41 @@ class Program{
                         Console.WriteLine($"Produto: {key.Nome_prod} - ID: {key.Cod_prod} - Quantidade: {key.Qtd_prod}");
                     }
 
+                }
+                
 
-                    continue;
+                if(op2 == 2){
 
-                case '2':
-                    
-                    break;
+                    double valor_min, valor_max;
 
-                case '3':
-                    
-                    return;
+                    Console.WriteLine("Insira um valor minimo e depois um valor maximo para filtrar produtos nessa faixa: ");
+                    valor_min = double.Parse(Console.ReadLine());
+                    valor_max = double.Parse(Console.ReadLine());
 
-                case '4':
-                    
-                    return;
+                    List<Estoque> MediaValor = lista.Where(x => x.Preco_prod <= valor_min && x.Preco_prod >= valor_max)
+                    .Select(x => new Estoque(x.Cod_prod,x.Qtd_prod,x.Nome_prod,x.Preco_prod)).ToList();
 
-                default:
-                    Console.WriteLine("Opção inválida. Tente novamente.");
-                    break;
-            }
+                    if(MediaValor.Count >= 1){
+                        Console.WriteLine("Os produtos nesse intervalo de valor são: ");
+                    }
+
+                    foreach(Estoque key in MediaValor){
+                        Console.WriteLine($"Produto: {key.Nome_prod} - Valor: {key.Preco_prod} - Código: {key.Cod_prod}");
+                    }
+
+
+                }
+
+                if(op2 == 3){
+
+                }
+
+                if(op2 == 4){
+                    flag2 = true;
+                }
+
+                }while(!flag2);
+
             }
 
             if(op == 4){
@@ -181,5 +197,5 @@ class Program{
             
         }while(!flag);
 
-    }
-}
+        }
+    }    
