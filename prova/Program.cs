@@ -78,7 +78,7 @@ class Cliente
 
     public DateTime Dat_nascimento { get; set; }
 
-    string EstadoCivil { get; set; }
+    public string EstadoCivil { get; set; }
     string Profissao { get; set; }
 
     public string Cpf
@@ -137,6 +137,7 @@ class Program
         try
         {
             clientes.Add(new Cliente("João", "12345578901", new DateTime(1990, 1, 1), "Solteiro", "Marceneiro"));
+            clientes.Add(new Cliente("Joana", "12345538901", new DateTime(1993, 1, 1), "Solteiro", "Mateiro"));
         }
         catch (InvalidOperationException e)
         {
@@ -162,9 +163,10 @@ class Program
             Console.WriteLine($"Advogado: {advogado.Nome}, CPF: {advogado.Cpf}, CNA: {advogado.Cna}, Idade: {advogado.CalcularIdade()}, Nascimento: {advogado.Dat_nascimento.ToString("dd/MM/yyyy")}");
         }
         
-        
+        Console.WriteLine("<-------------------------------------------->");
+
         Console.WriteLine("Digite uma idade minima e na sequencia uma idade Maxima.");
-        int idadeMinima = 45;
+        int idadeMinima = 10;
         int idadeMaxima = 100;
 
         List<Advogado> advogadosComIdade = advogados.FindAll(a => a.CalcularIdade() >= idadeMinima && a.CalcularIdade() <= idadeMaxima);
@@ -175,8 +177,31 @@ class Program
             Console.WriteLine($"Advogado: {advogado.Nome}, CPF: {advogado.Cpf}, CNA: {advogado.Cna}, Idade: {advogado.CalcularIdade()}, Nascimento: {advogado.Dat_nascimento.ToString("dd/MM/yyyy")}");
         }
        
-
+        Console.WriteLine("<-------------------------------------------->");
         
+        Console.WriteLine("Digite uma idade minima e na sequencia uma idade Maxima.");
+        int idadeMinima_cliente = 10;
+        int idadeMaxima_cliente = 100;
+
+        List<Advogado> ClienteComIdade = advogados.FindAll(a => a.CalcularIdade() >= idadeMinima_cliente && a.CalcularIdade() <= idadeMaxima_cliente);
+
+        Console.WriteLine($"Clientes com idade entre {idadeMinima_cliente} e {idadeMaxima_cliente} anos:");
+
+        foreach (Cliente cliente in clientes){
+            Console.WriteLine($"Cliente: {cliente.Nome}, CPF: {cliente.Cpf}, Idade: {cliente.CalcularIdade()}, Nascimento: {cliente.Dat_nascimento.ToString("dd/MM/yyyy")}");
+        }
+
+        Console.WriteLine("<-------------------------------------------->");
+
+            Console.WriteLine("Cliente com estado civil: ");
+
+        foreach(Cliente key in clientes){
+            Console.WriteLine($"Nome: {key.Nome} - {key.EstadoCivil}");
+        }
+
+        Console.WriteLine("<-------------------------------------------->");
+
+        Console.WriteLine("A lista dos clientes em ordem alfabetica: ");
 
     }
         }
